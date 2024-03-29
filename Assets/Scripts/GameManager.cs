@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject square;
+    
 
+    public GameObject square;
     public Text timeTxt;
 
     float time = 0.0f;

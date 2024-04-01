@@ -1057,7 +1057,7 @@ MonoBehaviour:
   square: {fileID: 7058341628244536400, guid: aa0ada38a0095854b8cf7aff7f755ef2, type: 3}
   endPanel: {fileID: 759859609}
   timeTxt: {fileID: 1925556620}
-  nowScore: {fileID: 0}
+  nowScore: {fileID: 683987194}
 --- !u!1 &1058168441
 GameObject:
   m_ObjectHideFlags: 0

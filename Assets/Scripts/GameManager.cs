@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Text timeTxt;
     public Text nowScore;
 
+    bool isPlay = true; // 타임의 소수점값이 미세하게 달라지는 것마저 방지하기 위한 변수 선언
+
     float time = 0.0f;
 
     private void Awake()
@@ -32,8 +34,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        timeTxt.text = time.ToString("N2"); // 소수점 두 번째자리까지
+        if (isPlay) // 게임 플레이시에만(조금 더 정확한 타임값 도출 가능)
+        {
+            time += Time.deltaTime;
+            timeTxt.text = time.ToString("N2"); // 소수점 두 번째자리까지
+        }
     }
 
     void MakeSquare()
@@ -44,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        isPlay = false; 
         Time.timeScale = 0.0f; // 타임의 크기 = 0 -> 멈춘것과 같음
         nowScore.text = time.ToString("N2");
         endPanel.SetActive(true);

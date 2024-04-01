@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Text nowScore;
     public Text bestScore;
 
+    public Animator anim; // 애니메이션에 접근하기 위한 Animator타입의 변수
+
     bool isPlay = true; // 타임의 소수점값이 미세하게 달라지는 것마저 방지하기 위한 변수 선언
 
     float time = 0.0f;
@@ -54,7 +56,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        isPlay = false; 
+        isPlay = false;
+        
         Time.timeScale = 0.0f; // 타임의 크기 = 0 -> 멈춘것과 같음
         nowScore.text = time.ToString("N2");
 

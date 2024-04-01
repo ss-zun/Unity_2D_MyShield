@@ -1083,6 +1083,7 @@ MonoBehaviour:
   endPanel: {fileID: 759859609}
   timeTxt: {fileID: 1925556620}
   nowScore: {fileID: 683987194}
+  bestScore: {fileID: 1022307591}
 --- !u!1 &1058168441
 GameObject:
   m_ObjectHideFlags: 0

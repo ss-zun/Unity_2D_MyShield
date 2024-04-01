@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         // 반복 실행 함수
         InvokeRepeating("MakeSquare", 0f, 1f);
     }

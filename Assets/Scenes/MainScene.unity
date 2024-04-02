@@ -1084,6 +1084,7 @@ MonoBehaviour:
   timeTxt: {fileID: 1925556620}
   nowScore: {fileID: 683987194}
   bestScore: {fileID: 1022307591}
+  anim: {fileID: 1270385144}
 --- !u!1 &1058168441
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isPlay = false;
-        
-        Time.timeScale = 0.0f; // 타임의 크기 = 0 -> 멈춘것과 같음
+        anim.SetBool("isDie", true); // 게임 종료시 풍선이 터지는 애니메이션으로 전환
+        Invoke("TimeStop", 0.5f);
         nowScore.text = time.ToString("N2");
 
         // 최고 점수가 있다면
@@ -86,5 +86,10 @@ public class GameManager : MonoBehaviour
         }        
 
         endPanel.SetActive(true);
+    }
+
+    void TimeStop()
+    {
+        Time.timeScale = 0.0f; // 타임의 크기 = 0 -> 멈춘것과 같음
     }
 }
